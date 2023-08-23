@@ -1,15 +1,10 @@
-function GainFooter(){
+function AppMain(){
     return(
-       <nav className="nav">
-        <ul className="ls">
-            <li><a href="#">Files</a>
-            </li><br/>
-            <li><a href="#">View</a>
-            </li><br/>
-            <li><a href="#">Help</a>
-            </li><br/>
-        </ul>
-       </nav>)
+       <div className="nav">
+            <div className="bar"><a href="#">Files</a></div>
+            <div className="bar"><a href="#">View</a></div>
+            <div className="bar"><a href="#">Help</a></div>
+       </div>)
 }
 
-export default GainFooter;
+export default AppMain;
