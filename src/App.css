@@ -56,22 +56,19 @@
 }
 .nav{
   display: flex;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: flex-start;
   top:0px;
-  position:absolute;
+  position: absolute;
   background-color: aqua;
 }
-.ls{
-  color: lightcoral;
-  list-style-type: none;
-  margin:5px;
-  padding:2px;
-  width:50%;
-  display:flex;
-}
-.ls li{
-  padding:26px 30px;
+.bar{
   margin: 20px;
-  border: 5px solid black;
+  padding: 20px;
+  border: 3px solid black;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 4rem;
 }
