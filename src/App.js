@@ -30,8 +30,8 @@ function App() {
         {/*<a href="/todo" >Todo</a>
         <a href="/student">Students</a>*/}
         <BrowserRouter>
-        <Link to="/">Home</Link>
-        <Link to="/ecommerce">Ecommerce</Link>
+        <Link className="link-home" to="/">Home</Link>
+        <Link className="link-home" to="/ecommerce">Ecommerce</Link>
         {/*<Link to="/todo">Todo</Link><br/>
         <Link to="/student">Student</Link>
       <Link to="/Login">Login</Link>*/}
