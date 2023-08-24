@@ -1,6 +1,6 @@
 import { useState} from "react";
 const Counter=()=>{
-  let count=0;
+  //let count=0;
   let [specialCount, setspecialCount] = useState(0);
   const increase=()=>{
     setspecialCount(specialCount+1);
@@ -9,7 +9,7 @@ const Counter=()=>{
     setspecialCount(specialCount+1);
   }  
   const showcount=()=>{
-    alert(specialCount);
+    alert(specialCount); 
   };
 
   return(

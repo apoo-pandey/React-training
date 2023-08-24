@@ -1,4 +1,4 @@
-function AppMain(){
+function Navbar(){
     return(
         <div className="nav">
             <div className="list">
@@ -14,4 +14,4 @@ function AppMain(){
     )
 }
 
-export default AppMain;
+export default Navbar;

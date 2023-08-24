@@ -9,7 +9,6 @@ class Counter extends Component{
         /*this.increase=this.increase.bind(this);
         this.decrease=this.decrease.bind(this);*/
     }
-
     //life-cycle mount
     componentDidMount(){
         console.log("component mounted");

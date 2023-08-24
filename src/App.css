@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: black;
+  background-color:blanchedalmond;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,23 +55,38 @@
   margin: 4px;
 }
 .nav{
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  top:0px;
-  position:absolute;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-around;
   background-color: aqua;
 }
-.ls{
-  color: lightcoral;
-  list-style-type: none;
-  margin:5px;
-  padding:2px;
-  width:50%;
-  display:flex;
-}
-.ls li{
-  padding:26px 30px;
+.list{
   margin: 20px;
-  border: 5px solid black;
+  padding: 20px;
+  border: 3px solid black;
+}
+.Tlist{
+  border: 10px solid white;
+  margin: 4px;
+}
+button{
+  color:blue;
+  background-color: white;
+}
+input{
+  background-color: antiquewhite;
+  color:white;
+}
+.visible{
+  background-color:honeydew
+}
+.home{
+  color:forestgreen;
+}
+.show{
+  color: black;
+  border: 2px solid black;
+  margin: 2px;
+  background-color:lightcoral
 }
