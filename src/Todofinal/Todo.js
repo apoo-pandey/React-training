@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import axios from "axios";
+import Todoform from "./Todoform";
+import Todolist from "./Todolist";
+
 
 const Todo=()=>{
     let [todolist,settodolist]=useState([]);
@@ -24,34 +27,32 @@ const Todo=()=>{
         const inputObject=formObject.todoname;
         console.log(inputObject); // access the name of the input field.
         const inputValue=inputObject.value;
-        console.log(inputValue); //to get the value inside the input field.
-        let newTodo=[...todolist,inputValue];
+        console.log(inputValue); 
+        //to get the value inside the input field.
+        let todob={name:inputObject.value, status:formObject.status.value};
+        {/*let newTodo=[...todolist,todob];
         settodolist(newTodo);
+    inputObject.value="";*/}
+        axios.post("/todos", todob).then((response)=>{
+            console.log(response);
+        });
+        getData();
     };
     const deleteTodo=(indexToDelete)=>{
-        let newTodo=[...todolist];
-        newTodo.splice(indexToDelete,1);
-        settodolist(newTodo);
+        axios.delete(`/todos/${indexToDelete}`)
+        .then((response)=>{
+            console.log(response);
+        })
+        getData();
     }
     const reset=()=>{
         settodolist([]);
     }
     return(
        <div className="Tlist">
-          <form onSubmit={addTodo}>
-           {/*<Button variant="contained" onClick={getData}>Get Data</Button>*/}
-            <TextField className="input" id="outlined-basic" label="Outlined" variant="outlined" name="todoname"/> {/*<input type="text" name="todoname"/>*/}
-            <Button type="submit" variant="contained">Add</Button> 
-            <Button onClick={reset} variant="contained">Clear all</Button> {/*<button type="submit" onClick={reset}>Clear all</button>*/}
-          </form>
-          {todolist.map((val,index)=>{
-            return <div>
-            Name:{val.name}
-            <br/>
-            Status:{val.status}<button onClick={()=>{deleteTodo(index)}}>Delete</button><br/> <br />
-            </div>
-          })
-        }
+        <Button onClick={reset} variant="contained">Clear all</Button>
+        <Todoform addTodo={addTodo} />
+        <Todolist todolist={todolist} deleteTodo={deleteTodo} /> 
        </div> 
     )
 }

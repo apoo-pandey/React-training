@@ -106,3 +106,12 @@ a {
 .link-home{
   color:black;
 }
+.hook{
+  color:black;
+}
+
+.emp-list{
+  margin: 2px;
+  border: 2px solid black;
+  background-color:lightsalmon;
+}
