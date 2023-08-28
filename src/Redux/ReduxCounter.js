@@ -1,23 +1,26 @@
 import { useSelector, useDispatch } from "react-redux";
+import { increase, decrease, reset } from "../Actions/Counteractions";
+
 const ReduxCounter = () => {
+  let step = 4;
   const dispatch = useDispatch();
   const [count] = useSelector((state) => {
     console.log(state);
-    return [state.count];
+    return [state.counter.count];
   });
   const increaseCount = () => {
     console.log("increaseCount");
-    dispatch({ type: "increase" });
+    dispatch(increase(step));
   };
 
   const decreaseCount = () => {
     console.log("decreaseCounter");
-    dispatch({ type: "decrease" });
+    dispatch(decrease());
   };
 
   const resetCount = () => {
     console.log("resetCounter");
-    dispatch({ type: "reset" });
+    dispatch(reset());
   };
   return (
     <div>

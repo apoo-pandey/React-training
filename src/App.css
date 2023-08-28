@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -75,8 +76,8 @@
   border: 3px solid black;
 }
 .Tlist{
-  border: 10px solid white;
-  margin: 4px;
+  border: 10px solid forestgreen;
+  margin: 2px;
 }
 button{
   color:blue;
@@ -111,7 +112,15 @@ a {
 }
 
 .emp-list{
+  border-radius: 15px;
   margin: 2px;
   border: 2px solid black;
-  background-color:lightsalmon;
+  background-color:aliceblue;
 }
+.emp-list1{
+    border-radius: 15px /50px;
+    margin: 2px;
+    border: 2px solid black;
+    background-color:antiquewhite;
+}
+

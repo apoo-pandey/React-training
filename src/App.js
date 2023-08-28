@@ -20,6 +20,8 @@ import Refhook from "./Refhook";
 import EcommerceStruct from "./EcommerceStruct";
 import ReduxCounter from "./Redux/ReduxCounter";
 import EmployeeApp from "./Assignment-3/EmployeeApp";
+import ReduxTodo from "./Redux/ReduxTodo";
+import ReduxEmployee from "./Redux/ReduxEmployee";
 
 function App() {
   {
@@ -41,6 +43,8 @@ function App() {
         {/*<Refhook />*/}
         {/*<EcommerceStruct />*/}
         {/*<EmployeeApp />*/}
+        {/*<ReduxTodo />*/}
+        {/*<ReduxEmployee />*/}
         <BrowserRouter>
           <Link className="link-home" to="/">
             Home
@@ -51,6 +55,9 @@ function App() {
           <Link className="link-home" to="/Assignment-3/EmployeeApp">
             Employee-Profile
           </Link>
+          <Link className="link-home" to="./Redux/ReduxEmployee">
+            Employee-Profile(Redux)
+          </Link>
           {/*<Link to="/todo">Todo</Link><br/>
         <Link to="/student">Student</Link>
       <Link to="/Login">Login</Link>*/}
@@ -59,6 +66,7 @@ function App() {
             {/*<Route path="/todo" element={<Todo />} />*/}
             <Route path="/ecommerce" element={<Ecommerce />} />
             <Route path="/Assignment-3/EmployeeApp" element={<EmployeeApp />} />
+            <Route path="/Redux/ReduxEmployee" element={<ReduxEmployee />} />
             {/*<Route path="/student" element={<Student />} />
           <Route path="/login" element={<Login />} />*/}
           </Routes>
