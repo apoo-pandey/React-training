@@ -19,14 +19,21 @@ const deleteEmp = (index) => {
   return delFunc;
 };
 
-const reset = () => ({ type: "reset" });
+const reset = () => {
+  const delallFunc = (dispatch) => {
+    axios.delete("/deleteemployee").then((res) => {
+      dispatch(fetchAction());
+    });
+  };
+  return delallFunc;
+};
 
 const fetchAction = () => {
   const fetchFunc = (dispatch) => {
     axios
       .get("/employee")
       .then((res) => {
-        console.log("dattaaaaa", res.data);
+        console.log(res.data);
         dispatch({ type: "fetch_emp", payload: res.data });
       })
       .catch((err) => {

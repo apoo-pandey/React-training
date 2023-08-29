@@ -22,6 +22,10 @@ import ReduxCounter from "./Redux/ReduxCounter";
 import EmployeeApp from "./Assignment-3/EmployeeApp";
 import ReduxTodo from "./Redux/ReduxTodo";
 import ReduxEmployee from "./Redux/ReduxEmployee";
+import Blog from "./CompanyContext/Blog";
+import CounterHook from "./Hooks/CounterHook";
+import LazyHome from "./lazyndsuspense/LazyHome";
+import Forgetpass from "./Forgetpass";
 
 function App() {
   {
@@ -45,6 +49,9 @@ function App() {
         {/*<EmployeeApp />*/}
         {/*<ReduxTodo />*/}
         {/*<ReduxEmployee />*/}
+        {/*<CounterHook />*/}
+        {/*<Blog />*/}
+        {/*<Todo />*/}
         <BrowserRouter>
           <Link className="link-home" to="/">
             Home
@@ -58,6 +65,9 @@ function App() {
           <Link className="link-home" to="./Redux/ReduxEmployee">
             Employee-Profile(Redux)
           </Link>
+          {/*<Link className="link-home" to="/lazyndsuspense/LazyHome">
+            Lazy-Home
+      </Link>*/}
           {/*<Link to="/todo">Todo</Link><br/>
         <Link to="/student">Student</Link>
       <Link to="/Login">Login</Link>*/}
@@ -67,8 +77,11 @@ function App() {
             <Route path="/ecommerce" element={<Ecommerce />} />
             <Route path="/Assignment-3/EmployeeApp" element={<EmployeeApp />} />
             <Route path="/Redux/ReduxEmployee" element={<ReduxEmployee />} />
-            {/*<Route path="/student" element={<Student />} />
-          <Route path="/login" element={<Login />} />*/}
+            {/*<Route path="/lazyndsuspense/LazyHome" element={<LazyHome />} />*/}
+            {/*<Route path="/student" element={<Student />} />*/}
+            <Route path="/login" element={<Login />}>
+              <Route path="Forgetpass" element={<Forgetpass />} />
+            </Route>
           </Routes>
         </BrowserRouter>
         {/*<div className="App">
