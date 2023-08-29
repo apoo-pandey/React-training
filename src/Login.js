@@ -5,14 +5,18 @@ function Login({ title, hobby }) {
     <div className="Login">
       <h4 className="Login-header">{title}</h4>
       <p className="txt">{hobby}</p>
+      <label name="username">name: </label>
       <input type="text" name="username" />
       <br />
+      <label name="username">password: </label>
       <input type="password" name="password" />
       <br />
       <button onClick={call} type="submit">
         Submit
       </button>
-      <Link to="/Login/Forgetpass.js">Forgot Password</Link>
+      <Link className="link-home" to="/Login/Forgetpass">
+        <u>Forgot Password?</u>
+      </Link>
       <br />
       <Outlet />
     </div>

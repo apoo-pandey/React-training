@@ -54,23 +54,26 @@ function App() {
         {/*<Todo />*/}
         <BrowserRouter>
           <Link className="link-home" to="/">
-            Home
+            <u>Home</u>
           </Link>
           <Link className="link-home" to="/ecommerce">
-            Ecommerce
+            <u>Ecommerce</u>
           </Link>
           <Link className="link-home" to="/Assignment-3/EmployeeApp">
-            Employee-Profile
+            <u>Employee-Profile</u>
           </Link>
           <Link className="link-home" to="./Redux/ReduxEmployee">
-            Employee-Profile(Redux)
+            <u>Employee-Profile(Redux)</u>
+          </Link>
+          <Link className="link-home" to="/Login">
+            <u>Login</u>
           </Link>
           {/*<Link className="link-home" to="/lazyndsuspense/LazyHome">
             Lazy-Home
       </Link>*/}
           {/*<Link to="/todo">Todo</Link><br/>
-        <Link to="/student">Student</Link>
-      <Link to="/Login">Login</Link>*/}
+        <Link to="/student">Student</Link>*/}
+
           <Routes>
             <Route path="/" element={<Home />} />
             {/*<Route path="/todo" element={<Todo />} />*/}
