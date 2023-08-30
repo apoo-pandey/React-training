@@ -94,6 +94,7 @@ input{
 }
 .home{
   color:forestgreen;
+  font-weight: 300;
 }
 .show{
   color: black;
@@ -128,4 +129,5 @@ a {
 .Login input{
   color:black;
 }
+
 

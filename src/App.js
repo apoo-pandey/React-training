@@ -26,6 +26,9 @@ import Blog from "./CompanyContext/Blog";
 import CounterHook from "./Hooks/CounterHook";
 import LazyHome from "./lazyndsuspense/LazyHome";
 import Forgetpass from "./Forgetpass";
+import ReduxCity from "./Assignment-4/ReduxCity";
+import News from "./Assignment-4/News";
+import Description from "./Assignment-4/Description";
 
 function App() {
   {
@@ -52,6 +55,7 @@ function App() {
         {/*<CounterHook />*/}
         {/*<Blog />*/}
         {/*<Todo />*/}
+        {/*<ReduxCity />*/}
         <BrowserRouter>
           <Link className="link-home" to="/">
             <u>Home</u>
@@ -68,6 +72,9 @@ function App() {
           <Link className="link-home" to="/Login">
             <u>Login</u>
           </Link>
+          <Link className="link-home" to="/Assignment-4/ReduxCity">
+            <u>Redux-City</u>
+          </Link>
           {/*<Link className="link-home" to="/lazyndsuspense/LazyHome">
             Lazy-Home
       </Link>*/}
@@ -82,6 +89,11 @@ function App() {
             <Route path="/Redux/ReduxEmployee" element={<ReduxEmployee />} />
             {/*<Route path="/lazyndsuspense/LazyHome" element={<LazyHome />} />*/}
             {/*<Route path="/student" element={<Student />} />*/}
+            <Route path="/Assignment-4/ReduxCity" element={<ReduxCity />}>
+              <Route path=":loc" element={<News />}>
+                <Route path="Description" element={<Description />} />
+              </Route>
+            </Route>
             <Route path="/login" element={<Login />}>
               <Route path="Forgetpass" element={<Forgetpass />} />
             </Route>
